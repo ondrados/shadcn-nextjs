@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { useRegisterMutation } from "@/redux/features/authApiSlice";
+import {Icons} from "@/components/ui/icons";
 
 const formSchema = z.object({
     email: z.string().email("Please enter a valid email address."),
@@ -104,7 +105,12 @@ export default function RegisterForm() {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit">Create account</Button>
+                    <Button type="submit" disabled={isLoading}>
+                        {isLoading && (
+                            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                        )}
+                        Create account
+                    </Button>
                 </form>
             </Form>
         </main>
