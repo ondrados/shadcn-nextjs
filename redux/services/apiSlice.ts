@@ -9,8 +9,8 @@ import { Mutex } from 'async-mutex';
 
 const mutex = new Mutex();
 const baseQuery = fetchBaseQuery({
-	baseUrl: `${process.env.NEXT_PUBLIC_HOST}/api`,
-	credentials: 'include',
+	baseUrl: `${process.env.NEXT_PUBLIC_API_HOST}/api`,
+	// credentials: 'include',
 });
 const baseQueryWithReauth: BaseQueryFn<
 	string | FetchArgs,

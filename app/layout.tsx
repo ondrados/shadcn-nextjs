@@ -22,12 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <Navbar />
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 my-8">
+          {/*<Navbar />*/}
+          <div>
             {children}
           </div>
           <Toaster />
-          <Footer />
+          {/*<Footer />*/}
         </Provider>
       </body>
     </html>
