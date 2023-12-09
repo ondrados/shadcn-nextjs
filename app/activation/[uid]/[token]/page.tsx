@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useActivationMutation } from "@/redux/features/authApiSlice";
+import { useActivationMutation } from "@/redux/features/auth/authApiEndpoints";
 import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/ui/icons";
 

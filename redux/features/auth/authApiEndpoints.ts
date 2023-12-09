@@ -1,4 +1,4 @@
-import { apiSlice } from '../services/apiSlice';
+import { baseApi } from '../../services/base';
 
 interface User {
 	email: string;
@@ -15,7 +15,7 @@ interface CreateUserResponse {
 	user: User;
 }
 
-const authApiSlice = apiSlice.injectEndpoints({
+const authApiEndpoints = baseApi.injectEndpoints({
 	endpoints: builder => ({
 		retrieveUser: builder.query<User, void>({
 			query: () => '/users/me/',
@@ -99,4 +99,4 @@ export const {
 	useActivationMutation,
 	useResetPasswordMutation,
 	useResetPasswordConfirmMutation,
-} = authApiSlice;
+} = authApiEndpoints;

@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
-import { useRegisterMutation } from "@/redux/features/authApiSlice";
+import { useRegisterMutation } from "@/redux/features/auth/authApiEndpoints";
 import {Icons} from "@/components/ui/icons";
 
 const formSchema = z.object({

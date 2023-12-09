@@ -4,7 +4,7 @@ import type {
 	FetchArgs,
 	FetchBaseQueryError,
 } from '@reduxjs/toolkit/query';
-import { setAuth, logout } from '../features/authSlice';
+import { setAuth, logout } from '../features/auth/authSlice';
 import { Mutex } from 'async-mutex';
 
 const mutex = new Mutex();
@@ -50,7 +50,7 @@ const baseQueryWithReauth: BaseQueryFn<
 	return result;
 };
 
-export const apiSlice = createApi({
+export const baseApi = createApi({
 	reducerPath: 'api',
 	baseQuery: baseQueryWithReauth,
 	endpoints: builder => ({}),

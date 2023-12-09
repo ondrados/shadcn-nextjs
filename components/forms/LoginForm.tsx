@@ -15,10 +15,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
-import { useLoginMutation } from "@/redux/features/authApiSlice";
+import { useLoginMutation } from "@/redux/features/auth/authApiEndpoints";
 import { useAppDispatch } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
-import { setAuth } from "@/redux/features/authSlice";
+import { setAuth } from "@/redux/features/auth/authSlice";
 import { Icons } from "../ui/icons";
 
 const formSchema = z.object({
